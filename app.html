@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="/static/client.js"></script>
+        <link rel="stylesheet" type="text/css" href="/static/style.css" />
+    </head>
+    <body>
+        <h1>A Typing Game</h1>
+    
+        <div id="signin">
+            <label for="nickname">Your Name: </label>
+            <input type="text" id="nickname" name="nickname" />
+            <button id="setNickname">Play</button>
+        </div>
+        
+        <div id="game">            
+            <div id="main">
+                <h2 id="word"></h2>
+                <div id="timer"></div>
+                <input type="text" id="wordInput" />
+            </div>
+            
+            <div class="column">
+                <h2>Overall</h2>
+                <ol id="players">
+                </ol>
+            </div>
+            <div class="column">
+                <h2>Last Round</h2>
+                <h2 id="lastWord"></h2>
+                <ol id="lastRound">
+                </ol>
+            </div>
+            <div class="column">
+                <h2>High Scores</h2>
+                <h2 id="highScoreWord"></h2>
+                <ol id="highScores">
+                </ol>
+            </div>
+        </div>
+        
+        <div id="waiting">
+            <img src="/static/waiting.gif" alt="Waiting for players..." />
+            Waiting for players...
+        </div>
+        
+    </body>
+</html>
