@@ -7,7 +7,7 @@ var path = require('path');
 var http = require('http').createServer(function (request, response) {
     // Build a path to the file based on the request URL. Serve app.html for
     // the index page.
-    var filePath = (request.url == '/') ? '/app.html' : request.url;
+    var filePath = (request.url == '/') ? '/static/app.html' : request.url;
     
     // Choose the appropriate content type based on file extension.
     var contentType = 'text/html';
@@ -162,7 +162,7 @@ var wordList = {
     // Load the wordlist.txt file from disk and parse its contents into an
     // array.
     load: function () {
-        this.words = fs.readFileSync(__dirname + '/wordlist.txt')
+        this.words = fs.readFileSync(__dirname + '/static/wordlist.txt')
                        .toString().split('\n');
     },
 
